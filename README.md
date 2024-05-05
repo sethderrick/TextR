@@ -1,6 +1,6 @@
 # Text Selection Highlighter
 
-This repository contains a simple text selection highlighter implemented in TypeScript. The highlighter allows users to select text within a specified HTML element and highlights the selected text.
+I went down a rabbit hole after watching a ThePrimeagen video wherein it was suggested that devs should try and build their own text editor from scratch. It sounded like a juicy little challenge and this is my effort. It will be a WIP for a bit. I'll change this README when I'm (kinda) done. 
 
 ## Features
 
