@@ -14,6 +14,7 @@ I went down a rabbit hole after watching a ThePrimeagen video wherein it was sug
 -   Adding undo/redo functionality...(command pattern?)
 -   Rich text editing capabilities
 -   Code syntax highlighting
+-   Word wrap
 -   ???
 
 ## Usage
