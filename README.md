@@ -1,6 +1,6 @@
 # Text Selection Highlighter
 
-I went down a rabbit hole after watching a ThePrimeagen video wherein it was suggested that devs should try and build their own text editor from scratch. It sounded like a juicy little challenge and this is my effort. It will be a WIP for a bit. I'll change this README when I'm (kinda) done. 
+I went down a rabbit hole after watching a ThePrimeagen video wherein it was suggested that devs should try and build their own text editor from scratch. It sounded like a juicy little challenge and this is my effort. It will be a WIP for a bit. I'll change this README when I'm (kinda) done.
 
 ## Features
 
@@ -8,6 +8,13 @@ I went down a rabbit hole after watching a ThePrimeagen video wherein it was sug
 -   Update the current selection as the mouse moves
 -   Finalize the selection when the mouse button is released
 -   Highlight the selected text with a specified color
+
+## Upcoming Features
+
+-   Adding undo/redo functionality...(command pattern?)
+-   Rich text editing capabilities
+-   Code syntax highlighting
+-   ???
 
 ## Usage
 
