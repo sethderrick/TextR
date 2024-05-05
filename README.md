@@ -2,6 +2,8 @@
 
 I went down a rabbit hole after watching a ThePrimeagen video wherein it was suggested that devs should try and build their own text editor from scratch. It sounded like a juicy little challenge and this is my effort. It will be a WIP for a bit. I'll change this README when I'm (kinda) done.
 
+NOTE: Like many things apparently simple...this ain't!
+
 ## Features
 
 -   Calculate the position of the mouse cursor relative to the text container
