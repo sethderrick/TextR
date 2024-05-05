@@ -101,15 +101,40 @@ function endSelection(event: MouseEvent) {
 
 function calculatePosition(x: number, y: number): number {
     const editor = document.getElementById('editor') as HTMLDivElement;
-    const rect = editor.getBoundingClientRect();
-    const relativeX = x - rect.left;
-    const relativeY = y - rect.top;
+    const textNode = editor.childNodes[0] as Text;
 
-    // Simple example: Calculate position based on relative coordinates
-    // This part will depend heavily on how your text is structured
-    const position = Math.floor(relativeX / 10); // Example metric, needs adjustment based on actual text rendering
+    if (!textNode) return 0; // Early exit if there's no text node
 
-    return position;
+    let range = document.createRange();
+    let pos = 0;
+    let closestPos = 0;
+    let minDistance = Infinity;
+
+    // Iterate over each character in the text node
+    for (pos = 0; pos < textNode.length; pos++) {
+        range.setStart(textNode, pos);
+        range.setEnd(textNode, pos + 1);
+
+        // Get the client rect for the current character
+        let rects = range.getClientRects();
+        if (rects.length > 0) {
+            let rect = rects[0];
+            if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) {
+                // The point is inside this character's rectangle
+                return pos;
+            }
+
+            // Find the position closest to the mouse click if not directly over a character
+            let distance = Math.sqrt(Math.pow(x - (rect.left + rect.right) / 2, 2) + Math.pow(y - (rect.top + rect.bottom) / 2, 2));
+            if (distance < minDistance) {
+                minDistance = distance;
+                closestPos = pos;
+            }
+        }
+    }
+
+    // If no direct hit, return the closest position
+    return closestPos;
 }
 
 function highlightSelection(startPos: number, endPos: number) {
