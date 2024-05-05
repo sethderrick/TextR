@@ -21,7 +21,14 @@ NOTE: Like many things apparently simple...this ain't!
 
 ## Usage
 
-Include the TypeScript file in your project and call the functions as needed. The main functions are:
+Before using the text editor in your project, you need to compile the TypeScript files to JavaScript. Run the following command in your project directory:
+
+```bash
+tsc editor.ts
+```
+This will generate an editor.js file that you should include in your HTML.
+
+Include the JavaScript file in your project and call the functions as needed. The main functions are:
 
 -   `calculatePosition(x: number, y: number): number` - Calculates the position of the mouse cursor relative to the text container.
 -   `updateSelection(event: MouseEvent): void` - Updates the current selection as the mouse moves.
